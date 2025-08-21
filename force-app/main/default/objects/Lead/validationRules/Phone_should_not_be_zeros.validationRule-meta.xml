@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Phone_should_not_be_zeros</fullName>
+    <active>true</active>
+    <errorConditionFormula>OR(
+  Phone = &quot;0000000000&quot;,
+  Phone = &quot;(000) 000-0000&quot;
+)</errorConditionFormula>
+    <errorMessage>Phone number cannot be all zeros.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>company_email_and_lead_source_is_require</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+  ISPICKVAL(Status, &quot;Qualified&quot;),
+  OR(
+    ISBLANK(Company),
+    ISBLANK(Email),
+    ISPICKVAL(LeadSource, &quot;&quot;)
+  )
+)</errorConditionFormula>
+    <errorMessage>Company, Email, and Lead Source are required to mark this Lead as Qualified.</errorMessage>
+</ValidationRule>

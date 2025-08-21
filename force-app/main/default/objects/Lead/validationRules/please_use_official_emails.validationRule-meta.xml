@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>please_use_official_emails</fullName>
+    <active>true</active>
+    <errorConditionFormula>OR(
+  CONTAINS(LOWER(Email), &quot;@gmail.com&quot;),
+  CONTAINS(LOWER(Email), &quot;@yahoo.com&quot;),
+  CONTAINS(LOWER(Email), &quot;@hotmail.com&quot;),
+  CONTAINS(LOWER(Email), &quot;@aol.com&quot;)
+)</errorConditionFormula>
+    <errorMessage>Please use a business email address.</errorMessage>
+</ValidationRule>
